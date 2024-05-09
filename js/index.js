@@ -192,7 +192,6 @@ const filterByRate = async () => {
 
   rateBtn.addEventListener("click", () => {
     postArray.sort((a, b) => (a.rate > b.rate ? -1 : 1));
-    console.log(postArray);
     printPost(postArray, "post-wrapper");
   });
 };
