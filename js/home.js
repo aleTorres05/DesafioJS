@@ -25,7 +25,6 @@ const createPostCard = (postObject) => {
   let listTags = tags.split(" ");
   let tagHTML = "";
   listTags.forEach((tag) => {
-    console.log(tag);
     tagHTML += `<button type="button" class="btn btn-outline-${
       btnOutline[Math.floor(Math.random() * btnOutline.length)]
     } text-dark">${tag}</button>`;
