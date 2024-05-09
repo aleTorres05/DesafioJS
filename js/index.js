@@ -29,7 +29,7 @@ const createPostCard = (postObject) => {
   });
   let cardHTML = `
   
-  <div class="card mb-3">
+  <div id="${title}" class="card mb-3">
   <a href="../views/postDetails.html?postKey=${key}" class="text-decoration-none text-dark">
   <div class="row  no-gutters">
     <div class="col ${picture ? "d-block" : "d-none"} ">
@@ -107,7 +107,7 @@ const printAllPost = async () => {
 const filterByCategory = () => {
   let inputFilter = document.getElementById("filterInput");
   inputFilter.addEventListener("keyup", (event) => {
-    let post = document.querySelectorAll("#post-wrapper div.card-body");
+    let post = document.querySelectorAll("#post-wrapper div.card");
     post.forEach((post) => {
       if (event.target.value == "") {
         post.classList.replace("d-none", "d-block");
