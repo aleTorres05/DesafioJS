@@ -143,7 +143,7 @@ const filterByTag = async () => {
         tagPostHTML1 += `
         <li class="list-group-item w-100">
         <a
-        href="../views/PostDetails.html?postKey=${key}" class="text-decoration-none text-black"
+        href="../views/postDetails.html?postKey=${key}" class="text-decoration-none text-black"
         >
           <div>${title}</div>
         </a>
