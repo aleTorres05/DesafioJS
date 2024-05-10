@@ -208,6 +208,14 @@ const filterByDate = async () => {
   });
 };
 
+let token = localStorage.getItem("token");
+let logOutBtn = document.getElementById("logOutBtn");
+
+logOutBtn.addEventListener("click", () => {
+  token ? window.open("../index.html", "_self") : window.stop();
+  localStorage.removeItem("token");
+});
+
 filterByDate();
 filterByRate();
 filterByRelevent();
